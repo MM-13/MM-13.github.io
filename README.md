@@ -1,4 +1,4 @@
-## Welcome MM-13's Minecraft
+## Welcome to MM-13's Minecraft
 
 Here, I will be posting some of my projects, future ideas and the progress I am making on my creations.
 
