@@ -7,8 +7,8 @@ Here, I will be posting some of my projects, future ideas and the progress I am 
 
 **My current projects I am working on:**
 
-- '''_'''Mini Factorys'''_'''
-- '''_'''...'''_'''
+- _Mini Factorys_
+- _..._
 
 
 ### Future Ideas
