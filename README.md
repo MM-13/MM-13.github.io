@@ -4,13 +4,12 @@ Here, I will be posting some of my projects, future ideas and the progress I am 
 
 ### Projects
 
-```markdown
+
 **My current projects I am working on:**
 
-- _Mini Factorys_
-- _..._
+- '''_'''Mini Factorys'''_'''
+- '''_'''...'''_'''
 
-```
 
 ### Future Ideas
 
