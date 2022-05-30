@@ -7,7 +7,8 @@ Here, I will be posting some of my projects, future ideas and the progress I am 
 
 **My current projects I am working on:**
 
-- _Mini Factorys_
+- _Mini Factories_
+- _Custom Ores_
 - _..._
 
 
@@ -17,4 +18,5 @@ I am also thinking of making resourcepacks and skins for minecraft players. So i
 
 ### Support or Contact
 
-I will be having a Discord server and Instagram soon created and a Patreon for you to support my work and contact for requests.
+I will be having a Discord server and a Paypal for requests and support.
+Instagram is open https://www.instagram.com/mm_13_2022/
