@@ -15,6 +15,7 @@ body {
     background-color: #333;
     display: flex;
     align-items: center;
+    flex-wrap: wrap; /* Allow wrapping of items in smaller screens */
 }
 
 .menu ul {
@@ -23,6 +24,7 @@ body {
     padding: 0;
     display: flex;
     align-items: center;
+    flex-wrap: wrap; /* Allow wrapping of items in smaller screens */
 }
 
 .menu ul li {
@@ -55,6 +57,7 @@ body {
     display: flex;
     align-items: center;
     margin-left: auto; 
+    flex-wrap: wrap; /* Allow wrapping of items in smaller screens */
 }
 
 .search-bar input[type="text"] {
@@ -79,6 +82,7 @@ body {
 
 header {
     padding: 10px 0;
+    text-align: center; /* Center align text for better responsiveness */
 }
 
 header h1 {
@@ -96,6 +100,7 @@ section {
 h2 {
     font-size: 2.5em;
     margin-bottom: 10px;
+    text-align: center; /* Center align text for better responsiveness */
 }
 
 .project, .game {
@@ -104,6 +109,8 @@ h2 {
     margin-bottom: 20px;
     border-radius: 10px;
     display: inline-block; 
+    width: 100%; /* Make sure it takes full width on smaller screens */
+    box-sizing: border-box; /* Include padding and border in width calculation */
 }
 
 .project h3, .game h3 {
@@ -126,4 +133,105 @@ a {
 
 a:hover {
     background-color: #525367;
+}
+
+footer {
+    text-align: center; /* Center align text for better responsiveness */
+    padding: 20px 0;
+}
+
+/* Media Queries for Responsiveness */
+
+@media (max-width: 1200px) {
+    .container {
+        width: 90%;
+    }
+
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    header p {
+        font-size: 1.1em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    .project h3, .game h3 {
+        font-size: 1.3em;
+    }
+
+    .project p, .game p {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu ul {
+        flex-direction: column; /* Stack menu items vertically */
+        align-items: flex-start;
+    }
+
+    .search-bar {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .search-bar input[type="text"] {
+        margin-right: 0;
+        margin-bottom: 10px;
+        width: 100%;
+    }
+
+    .search-bar button {
+        width: 100%;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+
+    .project h3, .game h3 {
+        font-size: 1.2em;
+    }
+
+    .project p, .game p {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 95%;
+    }
+
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    header p {
+        font-size: 0.9em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    .project h3, .game h3 {
+        font-size: 1em;
+    }
+
+    .project p, .game p {
+        font-size: 0.8em;
+    }
 }
