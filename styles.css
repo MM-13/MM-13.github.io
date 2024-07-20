@@ -109,8 +109,8 @@ h2 {
     margin-bottom: 20px;
     border-radius: 10px;
     display: inline-block; 
-    width: 100%; /* Make sure it takes full width on smaller screens */
-    box-sizing: border-box; /* Include padding and border in width calculation */
+    /*width: 100%;  Make sure it takes full width on smaller screens */
+    /*box-sizing: border-box;  Include padding and border in width calculation */
 }
 
 .project h3, .game h3 {
