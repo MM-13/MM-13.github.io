@@ -15,7 +15,7 @@ body {
     background-color: #333;
     display: flex;
     align-items: center;
-    flex-wrap: wrap; /* Allow wrapping of items in smaller screens */
+    flex-wrap: wrap;
 }
 
 .menu ul {
@@ -24,7 +24,7 @@ body {
     padding: 0;
     display: flex;
     align-items: center;
-    flex-wrap: wrap; /* Allow wrapping of items in smaller screens */
+    flex-wrap: wrap;
 }
 
 .menu ul li {
@@ -57,7 +57,7 @@ body {
     display: flex;
     align-items: center;
     margin-left: auto; 
-    flex-wrap: wrap; /* Allow wrapping of items in smaller screens */
+    flex-wrap: wrap;
 }
 
 .search-bar input[type="text"] {
@@ -82,7 +82,7 @@ body {
 
 header {
     padding: 10px 0;
-    text-align: center; /* Center align text for better responsiveness */
+    text-align: center;
 }
 
 header h1 {
@@ -100,25 +100,48 @@ section {
 h2 {
     font-size: 2.5em;
     margin-bottom: 10px;
-    text-align: center; /* Center align text for better responsiveness */
+    text-align: center;
 }
 
-.project, .game {
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.project {
+    background-color: #444;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.project h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.project iframe {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.game {
     background-color: #444;
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 10px;
     display: inline-block; 
-    width: 100%; /* Make sure it takes full width on smaller screens */
-    box-sizing: border-box; /* Include padding and border in width calculation */
+    width: 100%; 
+    box-sizing: border-box; 
 }
 
-.project h3, .game h3 {
+.game h3 {
     font-size: 1.5em;
     margin-bottom: 10px;
 }
 
-.project p, .game p {
+.game p {
     font-size: 1.1em;
     margin-bottom: 15px;
 }
@@ -136,11 +159,9 @@ a:hover {
 }
 
 footer {
-    text-align: center; /* Center align text for better responsiveness */
+    text-align: center;
     padding: 20px 0;
 }
-
-/* Media Queries for Responsiveness */
 
 @media (max-width: 1200px) {
     .container {
@@ -166,16 +187,11 @@ footer {
     .project p, .game p {
         font-size: 1em;
     }
-
-    .project iframe, .game iframe {
-        width: 100%; /* Ensure iframe scales with the container */
-        height: auto; /* Maintain aspect ratio */
-    }
 }
 
 @media (max-width: 768px) {
     .menu ul {
-        flex-direction: column; /* Stack menu items vertically */
+        flex-direction: column;
         align-items: flex-start;
     }
 
@@ -205,19 +221,6 @@ footer {
     h2 {
         font-size: 1.8em;
     }
-
-    .project h3, .game h3 {
-        font-size: 1.2em;
-    }
-
-    .project p, .game p {
-        font-size: 0.9em;
-    }
-
-    .project iframe, .game iframe {
-        width: 100%; /* Ensure iframe scales with the container */
-        height: auto; /* Maintain aspect ratio */
-    }
 }
 
 @media (max-width: 480px) {
@@ -243,10 +246,5 @@ footer {
 
     .project p, .game p {
         font-size: 0.8em;
-    }
-
-    .project iframe, .game iframe {
-        width: 100%; /* Ensure iframe scales with the container */
-        height: auto; /* Maintain aspect ratio */
     }
 }
