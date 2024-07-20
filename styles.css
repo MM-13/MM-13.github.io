@@ -166,6 +166,11 @@ footer {
     .project p, .game p {
         font-size: 1em;
     }
+
+    .project iframe, .game iframe {
+        width: 100%; /* Ensure iframe scales with the container */
+        height: auto; /* Maintain aspect ratio */
+    }
 }
 
 @media (max-width: 768px) {
@@ -208,6 +213,11 @@ footer {
     .project p, .game p {
         font-size: 0.9em;
     }
+
+    .project iframe, .game iframe {
+        width: 100%; /* Ensure iframe scales with the container */
+        height: auto; /* Maintain aspect ratio */
+    }
 }
 
 @media (max-width: 480px) {
@@ -233,5 +243,10 @@ footer {
 
     .project p, .game p {
         font-size: 0.8em;
+    }
+
+    .project iframe, .game iframe {
+        width: 100%; /* Ensure iframe scales with the container */
+        height: auto; /* Maintain aspect ratio */
     }
 }
