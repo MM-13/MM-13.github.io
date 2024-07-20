@@ -108,9 +108,8 @@ h2 {
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 10px;
-    display: inline-block; 
-    /*width: 100%;  Make sure it takes full width on smaller screens */
-    /*box-sizing: border-box;  Include padding and border in width calculation */
+    display: block; 
+    box-sizing: border-box; /* Include padding and border in width calculation */
 }
 
 .project h3, .game h3 {
@@ -166,11 +165,6 @@ footer {
     .project p, .game p {
         font-size: 1em;
     }
-
-    .project iframe, .game iframe {
-        width: 100%; /* Ensure iframe scales with the container */
-        height: auto; /* Maintain aspect ratio */
-    }
 }
 
 @media (max-width: 768px) {
@@ -213,11 +207,6 @@ footer {
     .project p, .game p {
         font-size: 0.9em;
     }
-
-    .project iframe, .game iframe {
-        width: 100%; /* Ensure iframe scales with the container */
-        height: auto; /* Maintain aspect ratio */
-    }
 }
 
 @media (max-width: 480px) {
@@ -244,9 +233,11 @@ footer {
     .project p, .game p {
         font-size: 0.8em;
     }
+}
 
-    .project iframe, .game iframe {
-        width: 100%; /* Ensure iframe scales with the container */
-        height: auto; /* Maintain aspect ratio */
-    }
+/* Specific styling for iframes to be responsive */
+iframe {
+    width: 100%; /* Ensure iframe scales with the container */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 100%; /* Prevent overflow */
 }
