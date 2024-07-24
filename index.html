@@ -8,15 +8,16 @@
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-     
+
     <nav class="menu">
         <div class="container">
-            <ul>
-                <li>
-                    <a href="/index.html">
-                        <img src="/images/favicon.png" alt="Favicon" class="favicon">
-                    </a>
-                </li>
+            <a href="/index.html">
+                <img src="/images/favicon.png" alt="Favicon" class="favicon">
+            </a>
+            <div class="hamburger" onclick="toggleMenu()">
+                ☰
+            </div>
+            <ul id="menu-items">
                 <li><a href="/index.html">Home</a></li>
                 <li><a href="/games.html">Games</a></li>
                 <li><a href="#projects">Projects</a></li>
@@ -40,12 +41,10 @@
         <div class="container">
             <h2>All Projects</h2>
             <div class="project-container">
-                <!-- Your first project -->
                 <div class="project">
                     <h3>Asteroid Trap</h3>
                     <iframe frameborder="0" src="https://itch.io/embed/2520837?bg_color=332e27&amp;fg_color=d6e5e6&amp;link_color=fb922b&amp;border_color=99897d" width="552" height="167"><a href="https://mm-13.itch.io/asteroid-trap">Asteroid Trap by MM-13</a></iframe>
                 </div>
-
                 <div class="project">
                     <h3>Smack 'n' Snatch</h3>
                     <iframe frameborder="0" src="https://itch.io/embed/2520508?bg_color=332e27&amp;fg_color=d6e5e6&amp;link_color=fb922b&amp;border_color=99897d" width="552" height="167"><a href="https://pixtr0.itch.io/smack-n-snatch">Smack 'n' Snatch by Pixtr0, Scuttsy, MM-13, Ashiruu</a></iframe>
@@ -58,7 +57,6 @@
         <div class="container">
             <h2>Featured Games</h2>
             <div class="project-container">
-                <!-- Add your games here -->
                 <div class="game">
                     <h3>Asteroid Trap</h3>
                     <p>Description of the game.</p>
@@ -69,7 +67,6 @@
                     <p>Description of the game.</p>
                     <a href="#">Play Now</a>
                 </div>
-                <!-- Add more games as needed -->
             </div>
         </div>
     </section>
@@ -80,28 +77,58 @@
         </div>
     </footer>
 
+    <script>
+        // Function to search through projects and games
+        function searchItems() {
+            let query = document.getElementById('searchInput').value.toLowerCase();
+            let projects = document.querySelectorAll('.project');
+            let games = document.querySelectorAll('.game');
+            
+            projects.forEach((project) => {
+                let title = project.querySelector('h3').textContent.toLowerCase();
+                project.style.display = title.includes(query) ? 'block' : 'none';
+            });
+
+            games.forEach((game) => {
+                let title = game.querySelector('h3').textContent.toLowerCase();
+                game.style.display = title.includes(query) ? 'block' : 'none';
+            });
+        }
+
+        // Function to toggle the menu on mobile
+        function toggleMenu() {
+            const menu = document.querySelector('.menu');
+            const menuItems = document.getElementById('menu-items');
+            
+            // Toggle the active class to show/hide the menu items
+            menu.classList.toggle('active');
+            
+            // Ensure menu items are shown/hidden based on the active class
+            if (menu.classList.contains('active')) {
+                menuItems.style.display = 'flex';
+            } else {
+                menuItems.style.display = 'none';
+            }
+        }
+
+        // Function to handle screen resize and reset menu state
+        function handleResize() {
+            const menu = document.querySelector('.menu');
+            const menuItems = document.getElementById('menu-items');
+            
+            if (window.innerWidth > 768) { // Adjust the breakpoint as necessary
+                menu.classList.remove('active'); // Remove active class
+                menuItems.style.display = 'flex'; // Show the menu items
+            } else {
+                menuItems.style.display = 'none'; // Hide menu items on small screens
+            }
+        }
+
+        // Add resize event listener
+        window.addEventListener('resize', handleResize);
+
+        // Initial check in case of a page load
+        handleResize();
+    </script>
 </body>
 </html>
-
-<script>
-    function searchItems() {
-        // Get the input value
-        let query = document.getElementById('searchInput').value.toLowerCase();
-        
-        // Get all project and game elements
-        let projects = document.querySelectorAll('.project');
-        let games = document.querySelectorAll('.game');
-        
-        // Search through projects
-        projects.forEach((project) => {
-            let title = project.querySelector('h3').textContent.toLowerCase();
-            project.style.display = title.includes(query) ? 'block' : 'none';
-        });
-
-        // Search through games
-        games.forEach((game) => {
-            let title = game.querySelector('h3').textContent.toLowerCase();
-            game.style.display = title.includes(query) ? 'block' : 'none';
-        });
-    }
-</script>

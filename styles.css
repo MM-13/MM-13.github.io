@@ -15,7 +15,13 @@ body {
     background-color: #333;
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
+    padding: 0 20px; /* Padding for spacing on the sides */
+}
+
+.menu .container {
+    display: flex;
+    align-items: center;
+    width: 100%;
 }
 
 .menu ul {
@@ -24,7 +30,7 @@ body {
     padding: 0;
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
+    flex: 1; /* Allows the ul to grow and take available space */
 }
 
 .menu ul li {
@@ -47,17 +53,19 @@ body {
 }
 
 .favicon {
-    width: auto;
     height: 40px;
-    margin-right: 10px;
-    vertical-align: middle; 
+    width: auto;
+    margin-right: 20px; /* Space between favicon and menu items */
+}
+
+.menu a:hover {
+    background-color: #333;
 }
 
 .search-bar {
     display: flex;
     align-items: center;
-    margin-left: auto; 
-    flex-wrap: wrap;
+    margin-left: auto; /* Pushes the search bar to the right */
 }
 
 .search-bar input[type="text"] {
@@ -163,88 +171,93 @@ footer {
     padding: 20px 0;
 }
 
-@media (max-width: 1200px) {
-    .container {
-        width: 90%;
-    }
-
-    header h1 {
-        font-size: 2.5em;
-    }
-
-    header p {
-        font-size: 1.1em;
-    }
-
-    h2 {
-        font-size: 2em;
-    }
-
-    .project h3, .game h3 {
-        font-size: 1.3em;
-    }
-
-    .project p, .game p {
-        font-size: 1em;
-    }
+.hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
 }
 
+.mobile-menu {
+    display: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.mobile-menu.show {
+    display: block;
+}
+
+.mobile-menu li {
+    margin: 0;
+}
+
+.mobile-menu li a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: #fb922b;
+    background-color: #333;
+}
+
+.mobile-menu li a:hover {
+    background-color: #444;
+}
+
+/* Responsive Styles */
 @media (max-width: 768px) {
     .menu ul {
-        flex-direction: column;
-        align-items: flex-start;
+        display: none;
     }
 
-    .search-bar {
-        margin-left: 0;
-        width: 100%;
+    .hamburger {
+        display: block;
     }
 
-    .search-bar input[type="text"] {
-        margin-right: 0;
-        margin-bottom: 10px;
-        width: 100%;
+    .mobile-menu {
+        display: block;
     }
 
-    .search-bar button {
-        width: 100%;
-    }
-
-    header h1 {
-        font-size: 2em;
-    }
-
-    header p {
-        font-size: 1em;
-    }
-
-    h2 {
-        font-size: 1.8em;
+    .mobile-menu.show {
+        display: block;
     }
 }
 
-@media (max-width: 480px) {
-    .container {
-        width: 95%;
+/* Hide menu items by default on small screens */
+#menu-items {
+    display: none; /* Hide menu items by default */
+    flex-direction: column;
+    width: 100%;
+    background-color: #333;
+    position: absolute;
+    top: 60px; /* Adjust based on your header height */
+    left: 0;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Show menu items when the hamburger is clicked */
+.menu.active #menu-items {
+    display: flex;
+}
+
+.hamburger {
+    cursor: pointer;
+    font-size: 24px;
+    color: #fb922b;
+    margin-left: auto;
+}
+
+@media (min-width: 769px) {
+    #menu-items {
+        display: flex; /* Ensure menu items are shown on larger screens */
+        position: static;
+        width: auto;
+        background-color: transparent;
+        flex-direction: row;
     }
 
-    header h1 {
-        font-size: 1.8em;
-    }
-
-    header p {
-        font-size: 0.9em;
-    }
-
-    h2 {
-        font-size: 1.5em;
-    }
-
-    .project h3, .game h3 {
-        font-size: 1em;
-    }
-
-    .project p, .game p {
-        font-size: 0.8em;
+    .hamburger {
+        display: none; /* Hide hamburger on larger screens */
     }
 }
