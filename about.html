@@ -12,14 +12,18 @@
     <nav class="menu">
         <div class="container">
             <ul>
-                <li><img src="/images/favicon.png" href="/index.html" alt="Favicon" class="favicon"></li>
+                <li>
+                    <a href="/index.html">
+                        <img src="/images/favicon.png" alt="Favicon" class="favicon">
+                    </a>
+                </li>
                 <li><a href="/index.html">Home</a></li>
                 <li><a href="/games.html">Games</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="/about.html">About</a></li>
                 <li class="search-bar">
-                    <input type="text" placeholder="Search...">
-                    <button type="submit">Search</button>
+                    <input type="text" id="searchInput" placeholder="Search...">
+                    <button type="button" onclick="searchItems()">Search</button>
                 </li>
             </ul>
         </div>
@@ -52,3 +56,26 @@
 
 </body>
 </html>
+
+<script>
+    function searchItems() {
+        // Get the input value
+        let query = document.getElementById('searchInput').value.toLowerCase();
+        
+        // Get all project and game elements
+        let projects = document.querySelectorAll('.project');
+        let games = document.querySelectorAll('.game');
+        
+        // Search through projects
+        projects.forEach((project) => {
+            let title = project.querySelector('h3').textContent.toLowerCase();
+            project.style.display = title.includes(query) ? 'block' : 'none';
+        });
+
+        // Search through games
+        games.forEach((game) => {
+            let title = game.querySelector('h3').textContent.toLowerCase();
+            game.style.display = title.includes(query) ? 'block' : 'none';
+        });
+    }
+</script>
