@@ -83,6 +83,7 @@ body {
     background-color: #fb922b;
     color: #fff;
     cursor: pointer;
+    margin-right: 20px;
 }
 
 .search-bar button:hover {
@@ -229,12 +230,12 @@ footer {
     display: none; /* Hide menu items by default */
     flex-direction: column;
     width: 100%;
-    background-color: #333;
+    /*background-color: #333; */
     position: absolute;
     top: 60px; /* Adjust based on your header height */
     left: 0;
     padding: 10px 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    /*box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);*/
 }
 
 /* Show menu items when the hamburger is clicked */
