@@ -65,7 +65,7 @@ body {
 
 .search-bar {
     display: flex;
-    align-items: right;
+    align-items: center;
     margin-left: auto; /* Pushes the search bar to the right */
 }
 
@@ -84,7 +84,6 @@ body {
     color: #fff;
     cursor: pointer;
     margin-right: 20px;
-    align-items: right;
 }
 
 .search-bar button:hover {
