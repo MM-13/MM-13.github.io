@@ -255,7 +255,7 @@ footer {
         display: flex; /* Ensure menu items are shown on larger screens */
         position: static;
         width: auto;
-        background-color: transparent;
+        /*background-color: transparent;*/
         flex-direction: row;
     }
 
