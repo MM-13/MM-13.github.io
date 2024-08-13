@@ -39,6 +39,7 @@ body {
 
 .menu ul li:last-child {
     margin-right: 0;
+    margin-left: 20px;
 }
 
 .menu ul li a {
@@ -82,6 +83,7 @@ body {
     background-color: #fb922b;
     color: #fff;
     cursor: pointer;
+    margin-right: 20px;
 }
 
 .search-bar button:hover {
@@ -229,7 +231,7 @@ footer {
     display: none; /* Hide menu items by default */
     flex-direction: column;
     width: 100%;
-    background-color: #333;
+    /*background-color: #333; */
     position: absolute;
     top: 60px; /* Adjust based on your header height */
     left: 0;
@@ -255,7 +257,7 @@ footer {
         display: flex; /* Ensure menu items are shown on larger screens */
         position: static;
         width: auto;
-        background-color: transparent;
+        /*background-color: transparent;*/
         flex-direction: row;
     }
 
