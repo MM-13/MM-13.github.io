@@ -122,18 +122,20 @@ h2 {
     background-color: #444;
     padding: 10px;
     border-radius: 10px;
-    width: 40%;
+    width: 100%; /* Make sure it uses the full available width in the grid */
+    box-sizing: border-box;
+}
+
+.project iframe {
+    max-width: 100%; /* Ensure iframe doesn't overflow the project container */
+    width: 552px; /* Set the iframe to a fixed width of 552px */
+    height: auto;
+    margin-bottom: 20px;
 }
 
 .project h3 {
     font-size: 1.5em;
     margin-bottom: 10px;
-}
-
-.project iframe {
-    width: 100%;
-    height: auto;
-    margin-bottom: 20px;
 }
 
 .game {
