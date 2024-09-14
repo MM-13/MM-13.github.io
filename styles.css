@@ -7,7 +7,7 @@ body {
 }
 
 .container {
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
 }
 
@@ -115,15 +115,18 @@ h2 {
 .project-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(552px, 1fr)); /* Columns adjust based on iframe width */
-    gap: 20px; /* Space between items */
+    gap: 10px; /* Space between items */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
 }
 
 .project {
     background-color: #444;
     padding: 10px;
     border-radius: 10px;
-    width: 100%; /* Ensure it takes full available width */
+    max-width: 580px; /* Ensure it takes full available width */
     box-sizing: border-box;
+    margin: 0;
 }
 
 .project iframe {
@@ -227,6 +230,15 @@ footer {
     .mobile-menu.show {
         display: block;
     }
+
+    .project-container {
+        grid-template-columns: 1fr; /* Make it a single-column layout on smaller screens */
+    }
+
+    .project iframe {
+        width: 100%; /* Allow the iframe to use the full width of its container */
+        max-width: none; /* Remove the 552px max-width on small screens */
+    }
 }
 
 /* Hide menu items by default on small screens */
@@ -266,9 +278,5 @@ footer {
 
     .hamburger {
         display: none; /* Hide hamburger on larger screens */
-    }
-
-    .project iframe {
-        width: 552px; /* Fix the iframe width to 552px */
     }
 }
