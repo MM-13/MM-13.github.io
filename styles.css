@@ -263,4 +263,8 @@ footer {
     .hamburger {
         display: none; /* Hide hamburger on larger screens */
     }
+
+    .project iframe {
+        width: 552px; /* Fix the iframe width to 552px */
+    }
 }
