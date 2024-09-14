@@ -114,24 +114,25 @@ h2 {
 
 .project-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Ensure columns fit 552px width */
-    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(552px, 1fr)); /* Columns adjust based on iframe width */
+    gap: 20px; /* Space between items */
 }
 
 .project {
     background-color: #444;
     padding: 10px;
     border-radius: 10px;
-    width: 100%; /* Make sure it uses the full available width in the grid */
+    width: 100%; /* Ensure it takes full available width */
     box-sizing: border-box;
 }
 
 .project iframe {
-    max-width: 100%; /* Ensure iframe doesn't overflow the project container */
-    width: 552px; /* Set the iframe to a fixed width of 552px */
+    width: 100%; /* Allow iframe to adjust based on parent width */
+    max-width: 552px; /* But don't let it exceed 552px */
     height: auto;
     margin-bottom: 20px;
 }
+
 
 .project h3 {
     font-size: 1.5em;
