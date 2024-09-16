@@ -114,32 +114,38 @@ h2 {
 
 .project-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(552px, 1fr)); /* Columns adjust based on iframe width */
-    gap: 10px; /* Space between items */
-    justify-content: center; /* Center items horizontally */
-    align-items: center; /* Center items vertically */
+    grid-template-columns: repeat(auto-fill, minmax(552px, 1fr)); /* Minimum size for each project */
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
 }
 
 .project {
     background-color: #444;
     padding: 10px;
     border-radius: 10px;
-    max-width: 580px; /* Ensure it takes full available width */
     box-sizing: border-box;
-    margin: 0;
+    margin: 0 auto;
+    width: 100%; /* Ensure project container takes up full width */
+    max-width: 100%; /* Allow it to expand */
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
 }
 
 .project iframe {
-    width: 100%; /* Allow iframe to adjust based on parent width */
-    max-width: 552px; /* But don't let it exceed 552px */
+    width: 100%; /* Allow iframe to take full width */
     height: auto;
-    margin-bottom: 20px;
+    max-width: 100%; /* Ensure iframe doesn't exceed its container */
+    margin: 0; /* Remove margin to allow full width usage */
 }
+
 
 
 .project h3 {
     font-size: 1.5em;
     margin-bottom: 10px;
+    text-align: center;
 }
 
 .game {
