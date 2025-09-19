@@ -1,164 +1,217 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-site-verification" content="rBlZ3QRK5zhbQx73rkNcUNEPTzPLDlRdUfpWFmGoCyc" />
-    <title>Portfolio Matthias Maes</title>
-    <link rel="icon" type="image/x-icon" href="Images/Personal/Picture2.ico">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/game.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Matthias Maes — Projects I Led</title>
+    <meta name="description"
+        content="Matthias Maes — Entrepreneurial game creator. Projects I led: design, production, and release." />
+    <link rel="stylesheet" href="styles.css">
 </head>
-<style>
-    h1 {
-        cursor: pointer; 
-    }
-    #overlay-play {
-        display: none;
-    }
-</style>
+
 <body>
-    <div class="container">
-        <aside class="sidebar1">
-            <ul class="socials">
-                <li>
-                    <a href="https://www.linkedin.com/in/matthias-maes-57aa5b2b7/" title="LinkedIn" target="_blank" rel="noopener noreferrer">
-                    <img src="Images/Icons/linkedin.png" alt="LinkedIn">
-                    </a>
-                </li>
-                <li>
-                    <a href="https://github.com/MM-13" title="GitHub" target="_blank" rel="noopener noreferrer">
-                    <img src="Images/Icons/github.png" alt="GitHub">
-                    </a>
-                </li>
-                <li>
-                    <a href="https://mm-13.itch.io/" title="Itch.io" target="_blank" rel="noopener noreferrer">
-                    <img src="Images/Icons/itchio.png" alt="Itch.io">
-                    </a>
-                </li>
-                <li>
-                    <a href="https://discord.gg/ED8ZrtPAnb" title="Discord" target="_blank" rel="noopener noreferrer">
-                    <img src="Images/Icons/discord.png" alt="Discord">
-                    </a>
-                </li>
-                <li>
-                    <a href="https://sketchfab.com/matthiasmaes/models" title="Sketchfab" target="_blank" rel="noopener noreferrer">
-                    <img src="Images/Icons/sketchfab.png" alt="Instagram">
-                    </a>
-                </li>
-                <li>
-                    <a href="mailto:maesmatthias@outlook.com" title="Email">
-                    <img src="Images/Icons/mail.png" alt="Email">
-                    </a>
-                </li>
-            </ul>
-            <div class="socials">
-                <button id="theme-toggle">
-                    <span id="icon" class="sunandmoon">&#9728;</span> <!-- sun icon --> 
-                </button>
+    <div class="wrap">
+        <header>
+            <div class="logo">MM</div>
+            <div>
+                <h1>Matthias Maes</h1>
+                <p class="lead">Lead creator & producer — I ship games and projects I lead from prototype to release.
+                </p>
             </div>
-        </aside>
-        <aside class="sidebar">
-            <h1>Matthias Maes</h1>
-            <hr>
-            <ul>
-                <li class="active-tab"><a href="index.html" class="active-tab">Home.html</a></li>
-                <li><a href="games.html">Projects.html</a></li>
-                <li><a href="about.html">About_Me.html</a></li>
-            </ul>
-        </aside>
-        <main class="content">
-            <section>
-                <h2><span class="blue-text">Print: </span>"Hello, World! I'm a Tool Programmer/Technical Developer!"</h2>
-                <hr>
-                <div id="profile">
-                    <div id="profile-text">
-                        <h3><span class="blue-text">void </span>Where_It_All_Began!</h3>
-                        <p>
-                            My name is Matthias Maes, I'm an independent game production student at Digital Arts & Entertainment at Howest University of Applied Sciences in Belgium. <br><br>
-                            My journey of how I came to love programming started with Python automation, then evolved into web development with HTML, CSS, and a bit of JavaScript. 
-                            Minecraft sparked my love for game creation, where I designed small games, mazes and dungeons, and made datapacks for extra fun. <br><br>
-                            That's how I got into game development. Now, I combine my creativity and programming skills to craft unique games. 
-                            As a quick learner, problem-solver, and team player, I'm excited to grow and make my mark in the industry.
-                        </p>
-                    </div>
-                    <img src="Images/Personal/CV_Picture2.png" alt="Matthias Maes" id="profile-picture">
+            <div class="header-actions">
+                <a class="btn" href="#projects">My Work</a>
+                <a class="btn ghost" href="#contact">Contact</a>
+            </div>
+        </header>
+
+        <div class="hero">
+            <div class="hero-card">
+                <div class="value">I focus on projects where I take the lead — directing design, production and release
+                    strategy. My portfolio highlights projects I initiated or led; each case study explains goals, my
+                    role, process and outcome.</div>
+                <div class="cta-row">
+                    <button class="btn" onclick="scrollToSection('projects')">Featured case study</button>
+                    <button class="btn ghost" onclick="scrollToSection('about')">My approach</button>
                 </div>
-                <h3><span class="blue-text">void </span>My_Favorite_Projects</h3>
-                <div class="projects">
-                    <!-- <div class="project" id="project-image-2" onclick="openOverlay('project-image-2')">
-                        <h4>Tides of Oblivion</h4>
-                        <img class="project-image" src="Images/TidesOfOblivion.png" alt="Tides of Oblivion">
-                        <p>Stranded on an island in the middle of nowhere with Mother Nature trying to kill you. Prepare for coming storms and find your way off the island!</p>
-                        <p>...</p>
-                    </div> -->
-                    <div class="project" id="project-image-6" onclick="openOverlay('project-image-6')">
-                        <h4>Café-CATastrophe</h4>
-                        <img class="project-image" src="Images/CC/cover.png" alt="Café-CATastrophe">
-                        <p>A couch co-op game where you either play as grandma trying to catch the cats and cleanup the café, or a cat having to destroy the cafe and not get caught!</p>
-                        <p>...</p>
+
+                <div class="featured">
+                    <div class="featured-content">
+                        <div class="featured-text">
+                            <div class="featured-title">Featured — <span class="role">Project Title (Led by me)</span>
+                            </div>
+                            <div class="meta">Role: Producer / Creative Lead · Team: 4 · Duration: 6 months</div>
+                            <p class="featured-desc">One-line summary: A short description of project aim and the impact
+                                it achieved (e.g. players reached, demo feedback, press mentions).</p>
+                            <div class="btn-row">
+                                <button class="btn" onclick="openModal('p1')">Read case study</button>
+                                <a class="btn ghost" href="#contact">Discuss partnership</a>
+                            </div>
+                        </div>
+                        <div class="featured-media">Featured media placeholder (gif/video)</div>
                     </div>
-                    <div class="project" onclick="myFunction('https://github.com/MM-13/SYTaDeL')">
-                        <h4>SYTaDeL</h4>
-                        <p>A tool made for downloading Spotify playlists via YouTube. I made it to help people download their playlists and listen to them offline.</p>
-                        <br>
-                        <p><strong>Platform:</strong> Windows PC</p>
-                        <p><strong>Language:</strong> Python</p>
-                        <br>
-                        <p>Click to visit!</p>
-                        <!--<div class="project-footer">
-                            <a class="github"><button>GitHub - SYTaDeL</button></a>
-                        </div>-->
-                    </div>                    
-                    <div class="project" onclick="myFunction('https://mm-13.github.io/CAP/')">
-                        <h4>Chaotic Art Productions Website</h4>
-                        <img class="project-image-web" src="Images/capfinal.png" alt="CAP">
-                        <p>This is the website I made for a group project where we had to make a fictional company.</p>
-                        <br>
-                        <p>Click to visit!</p>
-                    </div>
-                    <div class="more" onclick="myFunction('games.html')">
-                        <p><strong>All Projects...</strong></p>
-                    </div>
-                </div>
-            </section>
-        </main>        
-        <footer>
-            <p>&copy; 2025 Matthias Maes</p>
-        </footer>
-    </div>
-    <div id="game-container" class="hidden">
-        <span id="close-game" class="close-btn">&times;</span>
-        <canvas id="gameCanvas" width="500" height="300"></canvas>
-        <p>Use the spacebar to jump!</p>
-        <p id="score">Score: 0</p>
-    </div>
-    <div id="overlay" class="overlay">
-        <div class="overlay-content">
-            <span class="close" onclick="closeOverlay()">&times;</span>
-            <h2 id="overlay-title"></h2>
-            <div class="slider-container">
-                <img id="overlay-slider-image" class="slider-image" src="" alt="">
-                <video id="overlay-slider-video" class="slider-video" controls></video>
-                <div class="slider-nav">
-                    <button id="prev" onclick="prevImage()">&#10094;</button>
-                    <button id="next" onclick="nextImage()">&#10095;</button>
                 </div>
             </div>
-            <p id="overlay-description"></p>
-            <p id="overlay-uniqueness"></p>
-            <p id="overlay-role"></p>
-            <p><strong>Platform:</strong> <span id="overlay-platform"></span></p>
-            <p><strong>Language:</strong> <span id="overlay-language"></span></p>
-            <p id="overlay-group"></p>
-            <div id="overlay-buttons">
-                <a id="overlay-download" href="#" target="_blank"><button>Download</button></a>
-                <a id="overlay-play" href="#" target="_blank"><button>Play</button></a>
+
+            <div>
+                <div class="card">
+                    <div class="card-title">Quick facts</div>
+                    <div class="card-body">
+                        Lead projects shipped: <strong>4</strong><br>
+                        Production roles: Producer, Director, PM<br>
+                        Looking for: collaborators, publishing partners, playtesters
+                    </div>
+                    <div class="btn-row">
+                        <a class="btn" href="#contact">Hire me</a>
+                        <a class="btn ghost" href="/resume.pdf">Download CV</a>
+                    </div>
+                </div>
+
+                <div class="card card-status">
+                    <div class="card-title">Current status</div>
+                    <p class="card-desc">Working on a new prototype focused on emergent systems. Looking for small
+                        funding or mentorship to scale to a commercial MVP.</p>
+                </div>
             </div>
         </div>
+
+        <section id="projects">
+            <h2>Projects I led</h2>
+            <p class="section-desc">Only projects where I held the lead role (game director, producer, lead designer).
+                Click one for the full case study.</p>
+
+            <div class="grid">
+                <!-- Project Card 1 -->
+                <article class="card">
+                    <h3>Project One — <span class="role">Lead</span></h3>
+                    <div class="card-sub">Short one-liner about the project's goal and unique value.</div>
+                    <div class="tags">
+                        <span class="tag">Team: 5</span>
+                        <span class="tag">6 months</span>
+                        <span class="tag">Released: Demo</span>
+                    </div>
+                    <div class="btn-row">
+                        <button class="btn" onclick="openModal('p1')">Case study</button>
+                        <a class="btn ghost" href="#contact">Collaborate</a>
+                    </div>
+                </article>
+
+                <!-- Project Card 2 -->
+                <article class="card">
+                    <h3>Project Two — <span class="role">Lead</span></h3>
+                    <div class="card-sub">One-liner about impact: playtests, awards or press.</div>
+                    <div class="tags">
+                        <span class="tag">Team: 3</span>
+                        <span class="tag">3 months</span>
+                        <span class="tag">Jam Entry</span>
+                    </div>
+                    <div class="btn-row">
+                        <button class="btn" onclick="openModal('p2')">Case study</button>
+                        <a class="btn ghost" href="#contact">Contact</a>
+                    </div>
+                </article>
+
+                <!-- Project Card 3 -->
+                <article class="card">
+                    <h3>Project Three — <span class="role">Lead</span></h3>
+                    <div class="card-sub">Short description and outcome metric if any.</div>
+                    <div class="tags">
+                        <span class="tag">Team: 4</span>
+                        <span class="tag">Published</span>
+                    </div>
+                    <div class="btn-row">
+                        <button class="btn" onclick="openModal('p3')">Case study</button>
+                        <a class="btn ghost" href="#contact">Discuss</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>About — My approach when I lead</h2>
+            <div class="about-grid">
+                <div>
+                    <p class="about-text">I take ownership of the creative direction and production discipline across
+                        the full project lifecycle: vision > prototype > team > delivery. I focus on fast validation,
+                        clear milestones, and player feedback loops.</p>
+
+                    <div class="skills">
+                        <h3>Skills & leadership</h3>
+                        <ul>
+                            <li>Creative direction & game design</li>
+                            <li>Production planning & sprint management</li>
+                            <li>Player testing & iteration</li>
+                            <li>Pitching, community outreach & release strategy</li>
+                        </ul>
+                    </div>
+
+                    <div class="achievements">
+                        <h3>Selected achievements</h3>
+                        <div class="timeline">
+                            <div><strong>2025</strong> — Launched Project X (demo, 2k plays)</div>
+                            <div><strong>2024</strong> — Lead designer for Y (jam winner)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <aside class="card">
+                    <div class="card-title">Contact & availability</div>
+                    <p class="card-desc">I take on lead roles for small teams and indie projects. I'm open to
+                        partnerships, funding conversations and publishing talks.</p>
+                    <div class="contact-info">
+                        <div><strong>Email</strong><br><a href="mailto:matthias@example.com"
+                                class="link">matthias@example.com</a></div>
+                        <div><strong>Social</strong><br><a href="https://github.com/mm-13" class="link">GitHub</a> · <a
+                                href="#" class="link">LinkedIn</a> · <a href="#" class="link">Itch.io</a></div>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <div class="contact-grid">
+                <div class="card">
+                    <form onsubmit="event.preventDefault();sendMessage();">
+                        <label class="form-label">Message</label>
+                        <textarea id="msg" placeholder="Short note about a project or collaboration"
+                            class="form-textarea"></textarea>
+                        <div class="form-row">
+                            <input id="email" placeholder="your email" class="form-input" />
+                            <button class="btn" type="submit">Send</button>
+                        </div>
+                        <div id="sent" class="form-sent">Message prepared. Replace form action with your email endpoint
+                            to enable sending.</div>
+                    </form>
+                </div>
+
+                <div class="card">
+                    <div class="card-title">Quick connect</div>
+                    <p class="card-desc">Prefer to chat? Add me on LinkedIn or email me directly. If you want to propose
+                        a collaboration, include a short pitch and the budget/time window.</p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div>© Matthias Maes — Projects I led</div>
+            <div class="footer-note">Built for lead-focused storytelling · <a href="#projects" class="link">View case
+                    studies</a></div>
+        </footer>
     </div>
+
+    <!-- modals -->
+    <div id="modal" class="modal" role="dialog" aria-hidden="true">
+        <div class="modal-card">
+            <div class="modal-header">
+                <div class="card-title">Case study</div>
+                <button class="modal-close" onclick="closeModal()">✕</button>
+            </div>
+            <div id="modal-body" class="modal-body"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
-<script src="js/EasterEgg.js"></script>
-<script src="js/projectsData.js"></script>
-<script src="js/functionHandler.js"></script>

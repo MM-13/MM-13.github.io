@@ -1,0 +1,501 @@
+/* styles.css
+   Extracted: original <style> block (unchanged) + moved inline styles into classes
+*/
+
+/* -------------------------
+   Original style block (verbatim)
+   ------------------------- */
+:root {
+    --bg: #0f1724;
+    --panel: #0b1220;
+    --accent: #7dd3fc;
+    --muted: #9ca3af;
+    --glass: rgba(255, 255, 255, 0.03);
+    --maxw: 1100px;
+    --radius: 14px;
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+
+* {
+    box-sizing: border-box
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    background: linear-gradient(180deg, #071028 0%, #081424 60%);
+    color: #e6eef6
+}
+
+.wrap {
+    max-width: var(--maxw);
+    margin: 40px auto;
+    padding: 28px
+}
+
+header {
+    display: flex;
+    align-items: center;
+    gap: 18px
+}
+
+.logo {
+    width: 64px;
+    height: 64px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, var(--accent), #3b82f6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: #041023
+}
+
+h1 {
+    margin: 0;
+    font-size: 1.6rem
+}
+
+p.lead {
+    margin: 6px 0 0;
+    color: var(--muted)
+}
+
+/* hero */
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 420px;
+    gap: 28px;
+    margin-top: 22px
+}
+
+.hero-card {
+    background: var(--panel);
+    padding: 22px;
+    border-radius: var(--radius);
+    box-shadow: 0 6px 30px rgba(2, 6, 23, 0.7)
+}
+
+.value {
+    font-size: 1.05rem
+}
+
+.cta-row {
+    margin-top: 16px;
+    display: flex;
+    gap: 12px
+}
+
+.btn {
+    background: var(--accent);
+    border: none;
+    padding: 10px 14px;
+    border-radius: 10px;
+    color: #041023;
+    font-weight: 700;
+    cursor: pointer
+}
+
+.btn.ghost {
+    background: transparent;
+    border: 1px solid rgba(125, 211, 252, 0.14);
+    color: var(--accent)
+}
+
+/* project highlights */
+.featured {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent);
+    padding: 18px;
+    border-radius: 12px;
+    margin-top: 12px
+}
+
+.featured-media {
+    height: 220px;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #082033, #051826);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--muted);
+    font-weight: 600
+}
+
+.meta {
+    display: flex;
+    gap: 10px;
+    margin-top: 12px;
+    color: var(--muted);
+    font-size: 0.9rem
+}
+
+/* sections */
+section {
+    margin-top: 28px
+}
+
+h2 {
+    margin: 0 0 10px 0
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px
+}
+
+.card {
+    background: var(--panel);
+    padding: 14px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.02);
+    box-shadow: 0 6px 20px rgba(2, 6, 23, 0.6)
+}
+
+.card h3 {
+    margin: 0 0 8px 0
+}
+
+.tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap
+}
+
+.tag {
+    font-size: 12px;
+    padding: 6px 8px;
+    border-radius: 999px;
+    background: var(--glass);
+    color: var(--muted)
+}
+
+.role {
+    font-weight: 700;
+    color: var(--accent)
+}
+
+/* modal */
+.modal {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 30px
+}
+
+.modal.open {
+    display: flex
+}
+
+.modal-card {
+    width: 100%;
+    max-width: 880px;
+    background: #071628;
+    padding: 20px;
+    border-radius: 12px
+}
+
+.modal-close {
+    background: transparent;
+    border: 0;
+    color: var(--muted);
+    cursor: pointer
+}
+
+/* about/contact */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 18px
+}
+
+.timeline {
+    background: var(--glass);
+    padding: 12px;
+    border-radius: 10px;
+    color: var(--muted)
+}
+
+footer {
+    margin-top: 36px;
+    padding: 18px;
+    border-radius: 12px;
+    color: var(--muted);
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+/* responsive */
+@media (max-width:900px) {
+    .hero {
+        grid-template-columns: 1fr
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr
+    }
+
+    .wrap {
+        padding: 18px;
+        margin: 18px auto
+    }
+}
+
+/* -------------------------
+   Inline-style -> class mapping
+   (these were inline in the HTML; now centralized)
+   ------------------------- */
+
+/* header actions (moved from inline) */
+.header-actions {
+    margin-left: auto;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+/* Featured card: inline margin-top override (original .featured had 12px) */
+.featured {
+    /* inline used margin-top:18px; keep that override here */
+    margin-top: 18px;
+}
+
+/* featured-content was originally an inline flex wrapper */
+.featured-content {
+    display: flex;
+    gap: 14px;
+    align-items: stretch;
+}
+
+/* left column inside featured used inline "flex:1" */
+.featured-text {
+    flex: 1;
+}
+
+/* featured-media originally also had width:320px inline on wrapper */
+.featured-media {
+    width: 320px;
+    /* keeps original height from .featured-media rule too */
+}
+
+/* repeated small inline button-row in several places */
+.btn-row {
+    margin-top: 12px;
+    display: flex;
+    gap: 8px;
+}
+
+/* quick facts title + body (moved from inline) */
+.card-title {
+    font-weight: 700;
+}
+
+/* card body used inline color + margin */
+.card-body {
+    margin-top: 10px;
+    color: var(--muted);
+}
+
+/* small status card had inline margin */
+.card-status {
+    margin-top: 16px;
+}
+
+/* section description inline style */
+.section-desc {
+    color: var(--muted);
+    margin-top: 6px;
+}
+
+/* grid container had inline margin in original */
+.grid {
+    /* keep original grid settings above; add inline margin-top from HTML */
+    margin-top: 12px;
+}
+
+/* tags inside cards used inline spacing */
+.card .tags {
+    margin-top: 12px;
+}
+
+/* about area inline spacing */
+.about-grid {
+    /* original rules above; HTML had an inline margin-top:12px in that wrapper */
+    margin-top: 12px;
+}
+
+/* about paragraph had inline muted color */
+.about-text {
+    color: var(--muted);
+}
+
+/* skills block inline headings / list spacing */
+.skills h3 {
+    margin-bottom: 8px;
+}
+
+.skills ul {
+    color: var(--muted);
+    margin-top: 6px;
+}
+
+/* achievements wrapper had inline margin */
+.achievements {
+    margin-top: 12px;
+}
+
+/* timeline inline margin */
+.timeline {
+    margin-top: 8px;
+}
+
+/* Contact & availability card had inline paragraph color & margin */
+.card-desc {
+    color: var(--muted);
+    margin-top: 8px;
+}
+
+/* contact info wrapper inline spacing */
+.contact-info {
+    margin-top: 10px;
+}
+
+/* inline colored links (email, social links, footer link) */
+.link {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+/* contact form grid (moved from wrapper inline) */
+.contact-grid {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-top: 12px;
+}
+
+/* original left contact card had inline "flex:1;min-width:280px" */
+.contact-grid .card:first-child {
+    flex: 1;
+    min-width: 280px;
+}
+
+/* right contact card inline min-width:260px */
+.contact-grid .card:last-child {
+    min-width: 260px;
+}
+
+/* form elements (moved from inline) */
+.form-label {
+    display: block;
+    font-weight: 700;
+}
+
+.form-textarea {
+    width: 100%;
+    height: 110px;
+    margin-top: 8px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    background: transparent;
+    color: inherit;
+    padding: 10px;
+    resize: vertical;
+}
+
+.form-row {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.form-input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    background: transparent;
+    color: inherit;
+}
+
+.form-sent {
+    color: var(--muted);
+    margin-top: 8px;
+    display: none;
+    /* original element had display:none inline */
+}
+
+/* modal header/body mapping (moved inline -> css) */
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-body {
+    margin-top: 12px;
+    color: var(--muted);
+}
+
+/* footer note link color if needed (keeps original inline footer small style) */
+.footer-note {
+    color: var(--muted);
+}
+
+/* small utility: keep anchor hover visible */
+a.link:hover,
+a:hover {
+    text-decoration: underline;
+    opacity: 0.95;
+}
+
+/* small accessibility/UX touch: focus outlines for keyboard users */
+:focus {
+    outline: 3px solid rgba(125, 211, 252, 0.14);
+    outline-offset: 2px;
+}
+
+/* preserve original small-media responsive rules and add a <=600px tweak for forms */
+@media (max-width: 600px) {
+    .wrap {
+        margin: 18px auto;
+        padding: 18px;
+    }
+
+    .featured-content {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .featured-media {
+        width: 100%;
+        height: 180px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-grid {
+        flex-direction: column;
+    }
+
+    .contact-grid .card:first-child,
+    .contact-grid .card:last-child {
+        min-width: auto;
+        flex: none;
+        width: 100%;
+    }
+
+    .form-textarea {
+        height: 140px;
+    }
+}
