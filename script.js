@@ -1,7 +1,7 @@
 const caseStudies = {
       p1: `
-        <h2>Project One — Role: Lead</h2>
-        <p><strong>Goal:</strong> Explain the problem this project solved and the vision.</p>
+        <h2>Huntsman Isle — Role: Project Manager, Game Designer & Programmer</h2>
+        <p><strong>Goal:</strong> Make a game that is engaging and fun to play, but most importantly, to start my own studio with.</p>
         <p><strong>Process:</strong> How you lead the team: milestones, delegation, playtests, pivot decisions.</p>
         <p><strong>Outcome:</strong> Result metrics (plays, feedback, press), lessons learned and next steps.</p>
       `,
@@ -40,10 +40,17 @@ const caseStudies = {
     function sendMessage() {
       const msg = document.getElementById('msg').value.trim();
       const email = document.getElementById('email').value.trim();
-      if (!msg || !email) {
-        alert('Please add a short message and your email.');
+      const subject = document.getElementById('subject').value.trim();
+
+      if (!msg || !email || !subject) {
+        alert('Please add a short message, subject and your email.');
         return;
       }
+
+      const body = `From: ${email} \n ${msg}`;
+      const mailtoLink = `mailto:maesmatthias@outlook.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+      window.location.href = mailtoLink;
+
       document.getElementById('sent').style.display = 'block';
-      // NOTE: integrate your emailing endpoint here (Netlify forms, Formspree, server) to enable sending.
     }
