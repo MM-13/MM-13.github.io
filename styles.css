@@ -127,6 +127,11 @@ p.lead {
     font-weight: 600
 }
 
+.featured-media img {
+    width: 100%;
+    border-radius: 10px
+}
+
 .meta {
     display: flex;
     gap: 10px;
