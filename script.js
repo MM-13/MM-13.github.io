@@ -1,12 +1,14 @@
 const caseStudies = {
       p1: `
         <h2>Huntsman Isle — Role: Project Manager, Game Designer & Programmer</h2>
+        <img src="Images/HI.png" alt="Huntsman Isle Picture">
         <p><strong>Goal:</strong> Make a game that is engaging and fun to play, but most importantly, to start my own studio with.</p>
         <p><strong>Process:</strong> How you lead the team: milestones, delegation, playtests, pivot decisions.</p>
         <p><strong>Outcome:</strong> Result metrics (plays, feedback, press), lessons learned and next steps.</p>
       `,
       p2: `
         <h2>Café CATastrophe — Role: Project Manager & Programmer</h2>
+        <img src="Images/cover.png" alt="Café CATastrophe Picture">
         <p>This was a Game Jam project where I was the Project Manager.</p>
         <p><strong>Goal:</strong> Make a game in 2 days that is engaging and fun to play.</p>
         <p><strong>Process:</strong> How you lead the team: making sure everyone had something to do and had their work done on time without pushing.</p>
@@ -14,6 +16,7 @@ const caseStudies = {
       `,
       p3: `
         <h2>Collapsing Corridors — Solo Project</h2>
+        <img src="Images/CC.png" alt="Collapsing Corridors Picture">
         <p>This project was part of a game design assignment where we had to make a vertical slice.</p>
         <p><strong>Goal:</strong> Design an engaging and fun game through a solid game design process.</p>
         <p><strong>Process:</strong> Design a game from the ground up, starting from a sepcific theme.</p>
@@ -25,10 +28,6 @@ const caseStudies = {
       document.getElementById('modal').classList.add('open');
       document.getElementById('modal').setAttribute('aria-hidden', 'false');
       document.getElementById('modal-body').innerHTML = caseStudies[id] || '<p>No case study found.</p>';
-      /*window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });*/
     }
 
     function closeModal() {
