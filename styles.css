@@ -24,7 +24,10 @@ html,
 body {
     height: 100%;
     margin: 0;
-    background: linear-gradient(180deg, #071028 0%, #081424 60%);
+    background: linear-gradient(360deg, #071028 0%, #081424 60%);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
     color: #e6eef6
 }
 
