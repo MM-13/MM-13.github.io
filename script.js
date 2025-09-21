@@ -6,12 +6,18 @@ const caseStudies = {
         <p><strong>Outcome:</strong> Result metrics (plays, feedback, press), lessons learned and next steps.</p>
       `,
       p2: `
-        <h2>Project Two — Role: Lead</h2>
-        <p>Short case study. Replace this content with your real process + outcomes.</p>
+        <h2>Café CATastrophe — Role: Project Manager & Programmer</h2>
+        <p>This was a Game Jam project where I was the Project Manager.</p>
+        <p><strong>Goal:</strong> Make a game in 2 days that is engaging and fun to play.</p>
+        <p><strong>Process:</strong> How you lead the team: making sure everyone had something to do and had their work done on time without pushing.</p>
+        <p><strong>Outcome:</strong> We finished 8th out of the 30+ contestants.</p>
       `,
       p3: `
-        <h2>Project Three — Role: Lead</h2>
-        <p>Short case study. Replace with your details.</p>
+        <h2>Collapsing Corridors — Solo Project</h2>
+        <p>This project was part of a game design assignment where we had to make a vertical slice.</p>
+        <p><strong>Goal:</strong> Design an engaging and fun game through a solid game design process.</p>
+        <p><strong>Process:</strong> Design a game from the ground up, starting from a sepcific theme.</p>
+        <p><strong>Outcome:</strong> A fun and challenging concept with unique mechanics.</p>
       `
     }
 
