@@ -25,10 +25,10 @@ const caseStudies = {
       document.getElementById('modal').classList.add('open');
       document.getElementById('modal').setAttribute('aria-hidden', 'false');
       document.getElementById('modal-body').innerHTML = caseStudies[id] || '<p>No case study found.</p>';
-      window.scrollTo({
+      /*window.scrollTo({
         top: 0,
         behavior: 'smooth'
-      });
+      });*/
     }
 
     function closeModal() {

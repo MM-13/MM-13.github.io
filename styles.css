@@ -11,7 +11,7 @@
     --accent: #7dd3fc;
     --muted: #9ca3af;
     --glass: rgba(255, 255, 255, 0.03);
-    --maxw: 1100px;
+    --maxw: 1200px;
     --radius: 14px;
     font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
 }
@@ -217,9 +217,14 @@ h2 {
 
 /* about/contact */
 .about-grid {
-    display: grid;
-    grid-template-columns: 1fr 320px;
+    display: flex;
     gap: 18px
+}
+
+.about-skills {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 12px
 }
 
 .timeline {
@@ -382,9 +387,9 @@ footer {
 
 /* contact form grid (moved from wrapper inline) */
 .contact-grid {
-    display: flex;
-    gap: 16px;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 18px;
     margin-top: 12px;
 }
 
