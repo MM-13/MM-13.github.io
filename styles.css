@@ -285,8 +285,8 @@ footer {
     justify-content: center;
     padding: 24px;
     background: rgba(4, 8, 18, 0.85);
-    backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
     z-index: 1000;
     animation: none;
 }
