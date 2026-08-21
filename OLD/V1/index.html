@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Matthias Maes — Portfolio</title>
+    <meta name="description" content="Matthias Maes — Entrepreneurial game creator. Projects I led: design, production, and release." />
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="wrap">
+
+        <!-- ── Header ─────────────────────────────────────── -->
+        <header>
+            <div class="logo"><img src="Images/CV_Picture2.png" alt="MM"></div>
+            <div>
+                <h1>Matthias Maes</h1>
+                <p class="lead">Aspiring Entrepreneur</p>
+            </div>
+        </header>
+
+        <!-- ── Hero ──────────────────────────────────────── -->
+        <div class="hero">
+            <div class="hero-card">
+                <div class="value">I'm planning to start my own game studio because I love leading teams and projects,
+                    but also important to me is working <em>with</em> a team. I want everyone that works with me on a
+                    project to be inspired by creativity. With my projects, I always try to reach certain goals, take
+                    specific roles, manage the production pipeline and try to have the best result as a team.</div>
+
+                <div class="cta-row">
+                    <button class="btn" onclick="scrollToSection('projects')">My Projects</button>
+                    <button class="btn ghost" onclick="scrollToSection('about')">About Me</button>
+                </div>
+
+                <div class="featured">
+                    <div class="featured-content">
+                        <div class="featured-text">
+                            <div class="featured-title">Featured — <span class="role">Huntsman Isle</span></div>
+                            <div class="meta">Role: Project Manager / Producer · Team: 6 · Duration: 4 months</div>
+                            <p class="featured-desc">My first personal (non game jam) project for which I assembled a team. In development.</p>
+                            <div class="btn-row">
+                                <button class="btn" onclick="openModal('p1')">Project summary</button>
+                            </div>
+                        </div>
+                        <div class="featured-media"><img src="Images/post.png" alt="Huntsman Isle"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="card">
+                    <div class="card-title">Work experience</div>
+                    <div class="card-body">
+                        Projects led: <strong>3</strong><br>
+                        Roles: PM, Producer, Programmer, Designer<br>
+                        Student jobs: Tool programmer
+                    </div>
+                    <div class="btn-row">
+                        <a class="btn" href="/Resources/MotivationLetter_MatthiasMaes.pdf" target="_blank">Motivation letter</a>
+                        <a class="btn ghost" href="/Resources/Resume_MatthiasMaes.pdf" target="_blank">CV</a>
+                        <a class="btn ghost" href="#contact">Contact</a>
+                    </div>
+                </div>
+
+                <div class="card card-status">
+                    <div class="card-title">Current status</div>
+                    <p class="card-desc">Working on a new horror game called Huntsman Isle. Doing my internship at Flanders Game Hub to learn how to start my own studio.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ── Projects ──────────────────────────────────── -->
+        <section id="projects">
+            <h2>Projects I led or created</h2>
+            <p class="section-desc">Only projects where I held the lead role (game director, producer, lead designer).</p>
+
+            <div class="grid">
+                <article class="card">
+                    <h3>Huntsman Isle — <span class="role">PM, Programmer &amp; Designer</span></h3>
+                    <div class="card-sub">A exploration/survival horror game.</div>
+                    <div class="tags">
+                        <span class="tag">Team: 6</span>
+                        <span class="tag">4 months</span>
+                        <span class="tag">My project</span>
+                        <span class="tag">In development</span>
+                    </div>
+                    <div class="btn-row">
+                        <button class="btn" onclick="openModal('p1')">Project summary</button>
+                        <a class="btn ghost" href="https://mm-13.itch.io/huntsman-isle" target="_blank" rel="noopener">Itch.io</a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <h3>Café CATastrophe — <span class="role">PM &amp; Programmer</span></h3>
+                    <div class="card-sub">Couch co-op chaos game: play as grandma catching destructive cats in her café.</div>
+                    <div class="tags">
+                        <span class="tag">Team: 5</span>
+                        <span class="tag">2 days</span>
+                        <span class="tag">Jam Entry</span>
+                        <span class="tag">Released</span>
+                    </div>
+                    <div class="btn-row">
+                        <button class="btn" onclick="openModal('p2')">Project summary</button>
+                        <a class="btn ghost" href="https://mm-13.itch.io/cafe-catastrophe" target="_blank" rel="noopener">Itch.io</a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <h3>Collapsing Corridors — <span class="role">Game Designer</span></h3>
+                    <div class="card-sub">School assignment: design and develop a Vertical Slice of a game.</div>
+                    <div class="tags">
+                        <span class="tag">Solo</span>
+                        <span class="tag">1 month</span>
+                        <span class="tag">Vertical Slice</span>
+                        <span class="tag">Game Design</span>
+                    </div>
+                    <div class="btn-row">
+                        <button class="btn" onclick="openModal('p3')">Project summary</button>
+                        <a class="btn ghost" href="https://mm-13.itch.io/collapsing-corridors-vertical-slice" target="_blank" rel="noopener">Itch.io</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- ── About ──────────────────────────────────────── -->
+        <section id="about">
+            <h2>About Me</h2>
+            <div class="about-grid">
+                <div>
+                    <p class="about-text">I am a very engaging person. Currently part of the Howest Student Council.
+                        That engagement also reflects in my personal projects and team leading capabilities. Whenever I lead a
+                        project, working <strong>with</strong> the team is a priority; I take ownership of the creative
+                        direction while making sure every voice is heard. I plan the production pipeline and lead the
+                        full project lifecycle: vision → prototype → team → delivery. I focus on fast validation, clear
+                        milestones, and player feedback.
+                    </p>
+
+                    <div class="about-skills">
+                        <div class="skills">
+                            <h3>Skills</h3>
+                            <ul>
+                                <li>Leadership with a listening ear</li>
+                                <li>Teamwork &amp; inner-team communication</li>
+                                <li>Project Management &amp; Creative Direction</li>
+                                <li>Programming &amp; Game Design</li>
+                            </ul>
+                        </div>
+                        <div class="skills">
+                            <h3>Software</h3>
+                            <ul>
+                                <li>Excel, HacknPlan, Jira, Trello</li>
+                                <li>Unity, C#, Visual Studio (Code)</li>
+                                <li>Photoshop, Substance Painter, Blender</li>
+                                <li>HTML, CSS &amp; JS · Python</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="achievements">
+                        <h3>Selected achievements</h3>
+                        <div class="timeline">
+                            <div><strong>2025 - 2026</strong> — Went to Meet 'n Play #15, #16 & #17 with Huntsman Isle</div>
+                            <div><strong>2025</strong> — Started Project Huntsman Isle in Group Projects @ DAE</div>
+                            <div><strong>2025</strong> — Project Manager for Café CATastrophe at Game Jam (8th out of 30+)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── Contact ────────────────────────────────────── -->
+        <section id="contact">
+            <h2>Contact</h2>
+            <div class="contact-grid">
+                <div class="card">
+                    <form onsubmit="event.preventDefault(); sendMessage();">
+                        <label class="form-label">Send a message</label>
+                        <div class="form-row">
+                            <input id="subject" placeholder="Subject" class="form-input" />
+                        </div>
+                        <textarea id="msg" placeholder="Write your message here..." class="form-textarea"></textarea>
+                        <div class="form-row">
+                            <input id="email" placeholder="Your email" class="form-input" />
+                            <button class="btn" type="submit">Send</button>
+                        </div>
+                        <div id="sent" class="form-sent">✓ Message prepared — your mail client should open now.</div>
+                    </form>
+                </div>
+
+                <aside class="card">
+                    <div class="card-title">Links</div>
+                    <p class="card-desc">Want to get in touch or browse my work? Find all the necessary links below.</p>
+                    <div class="contact-info">
+                        <div><strong>Email</strong><br><a href="mailto:maesmatthias@outlook.com" class="link">maesmatthias@outlook.com</a></div>
+                        <div><strong>Profiles</strong><br>
+                            <a href="https://www.linkedin.com/in/matthias-maes-57aa5b2b7/" target="_blank" rel="noopener noreferrer" class="link">LinkedIn</a> ·
+                            <a href="https://mm-13.itch.io/" target="_blank" rel="noopener noreferrer" class="link">Itch.io</a> ·
+                            <a href="https://github.com/MM-13" target="_blank" rel="noopener noreferrer" class="link">GitHub</a> ·
+                            <a href="https://sketchfab.com/matthiasmaes/models" target="_blank" rel="noopener noreferrer" class="link">Sketchfab</a>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+
+            <div class="card">
+                <div class="card-title">Quick connect</div>
+                <p class="card-desc">Prefer a chat? Add me on <a href="https://www.linkedin.com/in/matthias-maes-57aa5b2b7/" target="_blank" rel="noopener noreferrer" class="link">LinkedIn</a> or email me at <a href="mailto:maesmatthias@outlook.com" class="link">maesmatthias@outlook.com</a>.</p>
+            </div>
+        </section>
+
+        <footer>
+            <div>© Matthias Maes — Portfolio</div>
+            <div class="footer-note">Built with care · <a href="https://github.com/mm-13" target="_blank" rel="noopener noreferrer" class="link">GitHub</a> · <a href="https://mm-13.itch.io/" target="_blank" rel="noopener noreferrer" class="link">Itch.io</a></div>
+        </footer>
+    </div>
+
+    <!-- ── Modal ──────────────────────────────────────────── -->
+    <div id="modal" class="modal" role="dialog" aria-modal="true" aria-hidden="true" onclick="handleModalBackdrop(event)">
+        <div class="modal-card">
+            <div class="modal-header">
+                <div class="card-title">Project Summary</div>
+                <button class="modal-close" onclick="closeModal()" aria-label="Close">✕</button>
+            </div>
+            <div class="modal-card-inner">
+                <div id="modal-body" class="modal-body"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
